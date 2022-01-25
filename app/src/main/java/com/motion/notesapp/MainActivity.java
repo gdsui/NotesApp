@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             noteList.add(new Note("clean", "architekture", "Monday", 2));
             noteList.add(new Note("clean", "architekture", "Monday", 2));
         }
+        //some comment
         recyclerView.setAdapter(adapter);
         adapter.setOnNoteClickListener(new OnNoteClickListener() {
             @Override
