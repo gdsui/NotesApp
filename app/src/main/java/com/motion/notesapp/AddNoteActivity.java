@@ -39,6 +39,7 @@ public class AddNoteActivity extends AppCompatActivity {
         RadioButton radioButton=findViewById(radioButtonId);
         int priority=Integer.parseInt(radioButton.getText().toString());
         Note note=new Note(title,desc,dayOfWeek,priority);
+        App.dataBase.noteDao().insertNote(note);
         MainActivity.noteList.add(note);
         startActivity(new Intent(AddNoteActivity.this,MainActivity.class));
     }

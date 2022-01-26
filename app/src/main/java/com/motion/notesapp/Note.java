@@ -1,6 +1,12 @@
 package com.motion.notesapp;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity
 public class Note {
+    @PrimaryKey(autoGenerate = true)
+    private int id;
     private String title;
     private String description;
     private String dayOfWeek;
@@ -15,6 +21,14 @@ public class Note {
 
     public String getTitle() {
         return title;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getDescription() {
